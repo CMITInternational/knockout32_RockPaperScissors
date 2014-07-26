@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-2.0.1.intellisense.js" />
+    <Content Include="App\Person.template.html" />
+    <Content Include="App\ViewModel.js" />
     <Content Include="Scripts\jquery-2.0.1.js" />
     <Content Include="Scripts\jquery-2.0.1.min.js" />
     <Content Include="Scripts\jquery-2.0.1.min.map" />
@@ -86,9 +88,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

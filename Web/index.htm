@@ -15,71 +15,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="span6">
-                    <div class="well well-small">
-                        <fieldset class="form-horizontal">
-                            <legend>Player 1</legend>
-                            <div class="control-group">
-                                <label class="control-label">Name</label>
-                                <div class="controls">
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Computer</label>
-                                <div class="controls">
-                                    <input class="checkbox inline pull-left" type="checkbox" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Element</label>
-                                <div class="controls">
-                                    <label class="radio inline">
-                                        <input type="radio" name="element1" /> Rock
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="element1" /> Paper
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="element1" /> Scissors
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
+                <div class="span6" data-bind="template: { name: 'person-template', data: player1 }">
                 </div>
-                <div class="span6">
-                    <div class="well well-small">
-                        <fieldset class="form-horizontal">
-                            <legend>Player 2</legend>
-                            <div class="control-group">
-                                <label class="control-label">Name</label>
-                                <div class="controls">
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Computer</label>
-                                <div class="controls">
-                                    <input class="checkbox inline pull-left" type="checkbox" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Element</label>
-                                <div class="controls">
-                                    <label class="radio inline">
-                                        <input type="radio" name="element2" /> Rock
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="element2" /> Paper
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="element2" /> scissors
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
+                <div class="span6" data-bind="template: { name: 'person-template', data: player2 }">
                 </div>
             </div>
             <div class="row">
@@ -94,5 +32,39 @@
         <script src="Scripts/jquery-2.0.1.min.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
         <script src="Scripts/knockout-2.2.1.js"></script>
+        <script src="App/ViewModel.js"></script>
+        <script type="text/html" id="person-template">
+            <div class="well well-small">
+                <fieldset class="form-horizontal">
+                    <legend>Player 1</legend>
+                    <div class="control-group">
+                        <label class="control-label">Name</label>
+                        <div class="controls">
+                            <input type="text" data-bind="value: name" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Computer</label>
+                        <div class="controls">
+                            <input class="checkbox inline pull-left" type="checkbox" data-bind="checked: isComputer" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Element</label>
+                        <div class="controls">
+                            <label class="radio inline">
+                                <input type="radio" value="Rock" data-bind="checked: element" /> Rock
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" value="Paper" data-bind="checked: element" /> Paper
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" value="Scissors" data-bind="checked: element" /> Scissors
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </script>
     </body>
 </html>
