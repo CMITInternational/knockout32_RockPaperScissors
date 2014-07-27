@@ -58,8 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-2.0.1.intellisense.js" />
-    <Content Include="App\Person.template.html" />
+    <Content Include="App\Person.template.js" />
     <Content Include="App\ViewModel.js" />
+    <Content Include="Scripts\infuser-amd.js" />
+    <Content Include="Scripts\infuser-amd.min.gz.js" />
+    <Content Include="Scripts\infuser-amd.min.js" />
+    <Content Include="Scripts\infuser.js" />
+    <Content Include="Scripts\infuser.min.gz.js" />
+    <Content Include="Scripts\infuser.min.js" />
     <Content Include="Scripts\jquery-2.0.1.js" />
     <Content Include="Scripts\jquery-2.0.1.min.js" />
     <Content Include="Scripts\jquery-2.0.1.min.map" />
@@ -83,6 +89,18 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="Scripts\koExternalTemplateEngine-amd.js" />
+    <Content Include="Scripts\koExternalTemplateEngine-amd.min.js" />
+    <Content Include="Scripts\koExternalTemplateEngine.js" />
+    <Content Include="Scripts\koExternalTemplateEngine.min.js" />
+    <Content Include="Scripts\koExternalTemplateEngine_all.js" />
+    <Content Include="Scripts\koExternalTemplateEngine_all.min.js" />
+    <Content Include="Scripts\TrafficCop-amd.js" />
+    <Content Include="Scripts\TrafficCop-amd.min.gz.js" />
+    <Content Include="Scripts\TrafficCop-amd.min.js" />
+    <Content Include="Scripts\TrafficCop.js" />
+    <Content Include="Scripts\TrafficCop.min.gz.js" />
+    <Content Include="Scripts\TrafficCop.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
