@@ -1,10 +1,7 @@
-using System.Reflection;
-using Core;
+﻿[assembly: WebActivatorEx.PreApplicationStartMethod(typeof($rootnamespace$.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof($rootnamespace$.App_Start.NinjectWebCommon), "Stop")]
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Api.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Api.App_Start.NinjectWebCommon), "Stop")]
-
-namespace Api.App_Start
+namespace $rootnamespace$.App_Start
 {
     using System;
     using System.Web;
@@ -64,9 +61,6 @@ namespace Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Load(Assembly.GetExecutingAssembly());
-
-            kernel.Bind<IGameEngine>().To<GameEngine>();
         }        
     }
 }
