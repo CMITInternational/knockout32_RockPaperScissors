@@ -9,8 +9,8 @@
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <div class="well well-small">
-                        <strong data-bind="text: elements"></strong>
+                    <div class="well well-small" data-bind="foreach: elements">
+                        <strong data-bind="text: $data"></strong>
                     </div>
                 </div>
             </div>

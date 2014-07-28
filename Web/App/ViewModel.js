@@ -10,7 +10,7 @@
     function Viewmodel() {
         var self = this;
 
-        self.elements = ko.observableArray([]);
+        self.elements = ko.observableArray(["stuff"]);
 
         self.player1 = ko.observable(new Person("Person", false, "Rock"));
         self.player2 = ko.observable(new Person("Computer", true, "Paper"));
@@ -22,10 +22,11 @@
             url: 'http://localhost:51478/api/Game',
             contentType: 'application/json',
             success: function (data) {
-                self.elements().length = 0;
+                var elements = [];
                 data.forEach(function(element) {
-                    self.elements().push(element);
+                    elements.push(element);
                 });
+                self.elements(elements);
             },
             error: function(error) {
                 alert('error: ' + error);
@@ -42,7 +43,7 @@
                 }),
                 contentType: 'application/json',
                 success: function (data) {
-                    alert('success: ' + data);
+                    self.winner(data.GameWinner.Name + ' with ' + data.GameWinner.ChosenElement);
                 },
                 error: function(error) {
                     alert('error: ' + error);
