@@ -22,7 +22,7 @@
             url: 'http://localhost:51478/api/Game',
             contentType: 'application/json',
             success: function (data) {
-                self.elements().clean();
+                self.elements().length = 0;
                 data.forEach(function(element) {
                     self.elements().push(element);
                 });
