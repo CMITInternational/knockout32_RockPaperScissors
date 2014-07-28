@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="span12">
                     <div class="well well-small">
-                        <h1>Rock, Paper, Scissors</h1>
+                        <h1 data-bind="text: elements"></h1>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,8 @@
             <div class="row">
                 <div class="span12">
                     <div class="well well-small">
-                        <button class="btn btn-primary btn-large">Play</button>
+                        <button class="btn btn-primary btn-large" data-bind="click: play">Play</button>
+                        <div class="info" data-bind="text: winner"></div>
                     </div>
                 </div>
             </div>
@@ -49,13 +50,13 @@
                         <label class="control-label">Element</label>
                         <div class="controls">
                             <label class="radio inline">
-                                <input type="radio" value="Rock" data-bind="checked: element" /> Rock
+                                <input type="radio" value="Rock" data-bind="checked: chosenElement" /> Rock
                             </label>
                             <label class="radio inline">
-                                <input type="radio" value="Paper" data-bind="checked: element" /> Paper
+                                <input type="radio" value="Paper" data-bind="checked: chosenElement" /> Paper
                             </label>
                             <label class="radio inline">
-                                <input type="radio" value="Scissors" data-bind="checked: element" /> Scissors
+                                <input type="radio" value="Scissors" data-bind="checked: chosenElement" /> Scissors
                             </label>
                         </div>
                     </div>
