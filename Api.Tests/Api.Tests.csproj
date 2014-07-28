@@ -64,10 +64,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Api\Api.csproj">
-      <Project>{42a0525f-aa04-4f3a-86b4-a7b85fdf9be0}</Project>
-      <Name>Api</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{3ed352aa-d82a-4d68-8371-6006134df97e}</Project>
       <Name>Core</Name>
