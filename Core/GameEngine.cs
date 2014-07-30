@@ -4,6 +4,8 @@ namespace Core
 {
     public class GameEngine : IGameEngine
     {
+        private static int lastIndeces = 0;
+
         public GamePlayer GetWinner(Game game)
         {
             if (game.Player1.ChosenElement.Beats(game.Player2.ChosenElement))
@@ -15,9 +17,14 @@ namespace Core
 
         public Element GetRandomElement()
         {
+            int indices;
             var values = Enum.GetValues(typeof(Element));
             var random = new Random();
-            var indices = random.Next(values.Length);
+            while ((indices = random.Next(values.Length)) == lastIndeces)
+            {
+                continue;
+            }
+            lastIndeces = indices;
             return (Element)values.GetValue(indices);
         }
     }

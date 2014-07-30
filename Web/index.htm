@@ -14,10 +14,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span6" data-bind="template: { name: 'person-template', data: player1 }">
-                </div>
-                <div class="span6" data-bind="template: { name: 'person-template', data: player2 }">
+            <div class="row" data-bind="foreach: {data: players, as: 'player'}">
+                <div class="span6" data-bind="template: { name: 'person-template', data: player }">
                 </div>
             </div>
             <div class="row">
@@ -30,10 +28,10 @@
             </div>
         </div>
 
-        <script id="person-template" type="text/html">
+        <script id="person-template" type="text/x-jQuery-tmpl">
             <div class="well well-small">
                 <fieldset class="form-horizontal">
-                    <legend>Player 1</legend>
+                    <legend>Player <span data-bind="text: $index() + 1"></span></legend>
                     <div class="control-group">
                         <label class="control-label">Name</label>
                         <div class="controls">
@@ -48,17 +46,22 @@
                     </div>
                     <div class="control-group">
                         <label class="control-label">Element</label>
-                        <div class="controls">
+                        <div class="controls" data-bind="foreach: {data: elements, as: 'element'}">
                             <label class="radio inline">
-                                <input type="radio" value="Rock" data-bind="checked: chosenElement, name: name" /> Rock
-                            </label>
-                            <label class="radio inline">
-                                <input type="radio" value="Paper" data-bind="checked: chosenElement, name: name" /> Paper
-                            </label>
-                            <label class="radio inline">
-                                <input type="radio" value="Scissors" data-bind="checked: chosenElement, name: name" /> Scissors
+                                <input type="radio" data-bind="attr: {value: element, name: player.name}, checked: player.chosenElement" /> <span data-bind="text: element"></span>
                             </label>
                         </div>
+                        <!--<div class="controls">
+                        <label class="radio inline">
+                            <input type="radio" value="Rock" data-bind="checked: chosenElement, name: name" /> Rock
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" value="Paper" data-bind="checked: chosenElement, name: name" /> Paper
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" value="Scissors" data-bind="checked: chosenElement, name: name" /> Scissors
+                        </label>
+                    </div>-->
                     </div>
                 </fieldset>
             </div>
