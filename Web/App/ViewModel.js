@@ -13,7 +13,8 @@
 
         self.elements = ko.observableArray(["stuff"]);
 
-        self.players = ko.observableArray([new Person("Person", false, "Rock", self.elements),new Person("Computer", true, "Paper", self.elements)]);
+        self.player1 = ko.observable(new Person("Person", false, "Rock", self.elements));
+        self.player2 = ko.observable(new Person("Computer", true, "Paper", self.elements));
 
         self.winner = ko.observable("");
 
@@ -35,26 +36,21 @@
         });
 
         self.play = function () {
-            var p1 = self.players()[0];
-            var p2 = self.players()[1];
             $.ajax({
                 type: 'PUT',
                 url: 'http://localhost:51478/api/Game',
                 cache: false,
                 data: ko.toJSON({
-                    player1: p1,
-                    player2: p2
+                    player1: self.player1(),
+                    player2: self.player2()
                 }),
                 contentType: 'application/json',
                 success: function (data) {
-                    var player1 = data.GamePlayed.Player1;
-                    var player2 = data.GamePlayed.Player2;
+                    var element1 = self.elements()[data.GamePlayed.Player1.ChosenElement];
+                    var element2 = self.elements()[data.GamePlayed.Player2.ChosenElement];
                     
-                    var p1 = self.elements()[player1.ChosenElement];
-                    var p2 = self.elements()[player2.ChosenElement];
-                    
-                    self.players()[0].chosenElement(p1);
-                    self.players()[1].chosenElement(p2);
+                    self.player1().chosenElement(element1);
+                    self.player2().chosenElement(element2);
 
                     self.winner(data.GameWinner.Name + ' with ' + self.elements()[data.GameWinner.ChosenElement]);
                 },
