@@ -20,10 +20,7 @@ namespace Core
             int indices;
             var values = Enum.GetValues(typeof(Element));
             var random = new Random();
-            while ((indices = random.Next(values.Length)) == lastIndeces)
-            {
-                continue;
-            }
+            while ((indices = random.Next(values.Length)) == lastIndeces){}
             lastIndeces = indices;
             return (Element)values.GetValue(indices);
         }
