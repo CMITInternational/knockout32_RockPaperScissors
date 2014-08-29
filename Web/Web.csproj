@@ -57,18 +57,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-2.0.1.intellisense.js" />
-    <Content Include="App\Person.template.js" />
-    <Content Include="App\ViewModel.js" />
-    <Content Include="Scripts\infuser-amd.js" />
-    <Content Include="Scripts\infuser-amd.min.gz.js" />
-    <Content Include="Scripts\infuser-amd.min.js" />
-    <Content Include="Scripts\infuser.js" />
-    <Content Include="Scripts\infuser.min.gz.js" />
-    <Content Include="Scripts\infuser.min.js" />
-    <Content Include="Scripts\jquery-2.0.1.js" />
-    <Content Include="Scripts\jquery-2.0.1.min.js" />
-    <Content Include="Scripts\jquery-2.0.1.min.map" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="main-require.js" />
+    <Content Include="Modules\Person.js" />
+    <Content Include="Modules\PersonViewModel.js" />
+    <Content Include="Modules\ViewModel.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -77,30 +85,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-responsive.css" />
-    <Content Include="Content\bootstrap-responsive.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="index.htm" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\knockout-2.2.1.debug.js" />
-    <Content Include="Scripts\knockout-2.2.1.js" />
-    <Content Include="Scripts\koExternalTemplateEngine-amd.js" />
-    <Content Include="Scripts\koExternalTemplateEngine-amd.min.js" />
-    <Content Include="Scripts\koExternalTemplateEngine.js" />
-    <Content Include="Scripts\koExternalTemplateEngine.min.js" />
-    <Content Include="Scripts\koExternalTemplateEngine_all.js" />
-    <Content Include="Scripts\koExternalTemplateEngine_all.min.js" />
-    <Content Include="Scripts\TrafficCop-amd.js" />
-    <Content Include="Scripts\TrafficCop-amd.min.gz.js" />
-    <Content Include="Scripts\TrafficCop-amd.min.js" />
-    <Content Include="Scripts\TrafficCop.js" />
-    <Content Include="Scripts\TrafficCop.min.gz.js" />
-    <Content Include="Scripts\TrafficCop.min.js" />
+    <Content Include="Scripts\knockout-3.2.0.debug.js" />
+    <Content Include="Scripts\knockout-3.2.0.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\text.js" />
+    <Content Include="Templates\game.tmpl.html" />
+    <Content Include="Templates\person.tmpl.html" />
     <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>

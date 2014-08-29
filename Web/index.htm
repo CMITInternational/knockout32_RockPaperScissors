@@ -6,60 +6,8 @@
 </head>
     <body>
         
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div class="well well-small" data-bind="foreach: elements">
-                        <strong data-bind="text: $data"></strong>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span6" data-bind="template: { name: 'person-template', data: players()[0] }">
-                </div>
-                <div class="span6" data-bind="template: { name: 'person-template', data: players()[1] }">
-                </div>
-            </div>
-            <div class="row">
-                <div class="span12">
-                    <div class="well well-small">
-                        <button class="btn btn-primary btn-large" data-bind="click: play">Play</button>
-                        <div class="info" data-bind="text: winner"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div data-bind='component: { name: "game" }'></div>
 
-        <script id="person-template" type="text/x-jQuery-tmpl">
-            <div class="well well-small">
-                <fieldset class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label">Name</label>
-                        <div class="controls">
-                            <input type="text" data-bind="value: name" />
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Computer</label>
-                        <div class="controls">
-                            <input class="checkbox inline pull-left" type="checkbox" data-bind="checked: isComputer" />
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Element</label>
-                        <div class="controls" data-bind="foreach: {data: elements, as: 'element'}">
-                            <label class="radio inline">
-                                <input type="radio" data-bind="attr: {value: element, name: $parent.name}, checked: $parent.chosenElement" /> <span data-bind="text: element"></span>
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
-        </script>
-
-        <script src="Scripts/jquery-2.0.1.min.js"></script>
-        <script src="Scripts/bootstrap.min.js"></script>
-        <script src="Scripts/knockout-2.2.1.js"></script>
-        <script src="App/ViewModel.js"></script>
+        <script data-main="main-require" src="scripts/require.js"></script>
     </body>
 </html>
