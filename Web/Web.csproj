@@ -77,6 +77,16 @@
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="specs\node_modules\.bin\r.js.cmd" />
+    <Content Include="specs\node_modules\amdefine\LICENSE" />
+    <Content Include="specs\node_modules\amdefine\package.json" />
+    <Content Include="specs\node_modules\amdefine\README.md" />
+    <Content Include="specs\node_modules\amdrequire\changelog.md" />
+    <Content Include="specs\node_modules\amdrequire\LICENSE" />
+    <Content Include="specs\node_modules\amdrequire\package.json" />
+    <Content Include="specs\node_modules\amdrequire\README.md" />
+    <Content Include="specs\node_modules\requirejs\package.json" />
+    <Content Include="specs\node_modules\requirejs\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,6 +102,21 @@
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\text.js" />
+    <Content Include="services\game.js" />
+    <Content Include="services\http.js" />
+    <Content Include="specs\game.spec.js" />
+    <Content Include="specs\http-mock.js" />
+    <Content Include="specs\http.spec.js" />
+    <Content Include="specs\jquery-mock.js" />
+    <Content Include="specs\node_modules\.bin\r.js" />
+    <Content Include="specs\node_modules\amdefine\amdefine.js" />
+    <Content Include="specs\node_modules\amdefine\intercept.js" />
+    <Content Include="specs\node_modules\amdrequire\amdrequire.js" />
+    <Content Include="specs\node_modules\requirejs\bin\r.js" />
+    <Content Include="specs\node_modules\requirejs\require.js" />
+    <Content Include="specs\person.spec.js" />
+    <Content Include="specs\requirejs-setup.js" />
+    <Content Include="specs\requirejs-wrapper-template.js" />
     <Content Include="Templates\game.tmpl.html" />
     <Content Include="Templates\person.tmpl.html" />
     <Content Include="test.html" />
